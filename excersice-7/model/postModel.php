@@ -29,3 +29,12 @@ function get_post_by_id($id){
 		$post = mysqli_fetch_assoc($result);
 	return $post;
 }
+function delete_post_by_id($id){
+	$link = open_database_connection();
+	$id = intval($id);
+	$query = 'DELETE FROM posts WHERE id = ' . $id;
+	$result = mysqli_query($link, $query);
+	if($result != NULL)
+		$post = mysqli_fetch_assoc($result);
+	return $post;
+}

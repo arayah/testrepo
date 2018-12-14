@@ -9,3 +9,8 @@ function show_action($id){
 	$post = get_post_by_id($id);
 	require 'views/show.php';
 }
+
+function delete_action($id){
+	$post = delete_post_by_id($id);
+	require 'views/show.php';
+}
