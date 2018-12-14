@@ -6,7 +6,7 @@ require_once 'controllers/postController.php';
 // retrive the requested url
 $uri = $_SERVER['REQUEST_URI'];
 
-echo 'this is the requested url '.$uri;
+echo $uri;
 
 if ('/excersice-7/' == $uri || '/excersice-7/index.php' == $uri) {
 	list_action();
